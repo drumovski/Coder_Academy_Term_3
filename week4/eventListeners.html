@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<!-- Resources for understanding the event object : https://developer.mozilla.org/en-US/docs/Web/API/Event -->
+
+<!-- Event listener - interface
+Event Object : data related to the event
+handleEvent() function that does something upon the event taking place -->
+
+<body>
+  <button id="btn">Click here!</button>
+  <script>
+      const btn = document.getElementById("btn")
+
+// Syntax : targetElement.addEventListener(type, listener, [options])  
+  // btn.addEventListener("click", (event) => {alert("Element Clicked through function")})
+
+btn.addEventListener("click", {
+    handleEvent: function (event){
+        alert("Element Clicked through handleEvent property")
+    }
+})
+
+
+  </script>
+  
+</body>
+</html>
+
+<!-- Can one target element have more than one event handlers ? YES 
+For example, a webpage with an advertising-module and statistics-module both monitoring video-watching -->
+

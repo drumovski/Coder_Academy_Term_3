@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Document, Node, Element, NodeList -->
+    <script>
+            let heading = document.createElement("h1")
+            let headingContent = document.createTextNode("Fun Times Ahead")               
+        // append elements 
+        heading.appendChild(headingContent)
+        document.body.appendChild(heading)
+        console.log(heading.childNodes)
+
+        heading.removeChild(headingContent)
+        heading.appendChild(document.createTextNode("Fun Times Ahead"))
+        // innerHTML -> remove current child -> create new child element -> append new child to parent
+// let newChild = document.createTextNode("Fun with JS")
+// heading.appendChild(newChild)
+// heading.textContent = "All the fun is gone !"
+// console.log(heading.childNodes)
+// Add a p element "with JS" , "with Ruby"
+
+let p1 = document.createElement("p")
+p1.textContent = "with JS"
+let p2 = document.createElement("p")
+p2.textContent = "with Ruby"
+
+// create new div element
+let div1 = document.createElement("div")
+document.body.appendChild(div1)
+
+
+let div2 = document.createElement("div")
+div2.appendChild(p1)
+div2.appendChild(p2)
+
+document.body.appendChild(div2)
+
+// Nodelist querySelector querySelectorAll
+
+let nodeListOfPs = document.querySelectorAll("p")
+console.log(nodeListOfPs)
+// nodeListOfPs can be converted into an array
+let arrayOfPs = Array.from(nodeListOfPs)
+console.log(arrayOfPs)
+
+let nodeListOfPs = document.querySelectorAll("p")
+
+</script>  
+</body>
+</html>
+
+    
+    
